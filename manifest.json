@@ -4,7 +4,7 @@
   "description" : "Condense the text",
   "version" : "0.0.1",
   "logo" : "ns:summary",
-  "appCast" : "",
+  "appCast" : "https://raw.githubusercontent.com/ysnows/enconvo.summarize/main/appcast.json",
   "author" : "enconvo",
   "name" : "Summarize"
 }
