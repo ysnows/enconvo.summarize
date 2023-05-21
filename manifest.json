@@ -1,0 +1,10 @@
+{
+  "extensionId" : "enconvo.summarize",
+  "homePage" : "https:\/\/github.com\/ysnows\/enconvo.summarize",
+  "description" : "Condense the text",
+  "version" : "0.0.1",
+  "logo" : "ns:summary",
+  "appCast" : "",
+  "author" : "enconvo",
+  "name" : "Summarize"
+}
