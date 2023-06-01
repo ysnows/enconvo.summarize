@@ -1,11 +1,6 @@
 {
   "identifier": "enconvo.blog",
   "versions": [
-    {
-      "version": "0.0.1",
-      "desc": "feat: 1. v0.0.1",
-      "url": "https://github.com/ysnows/enconvo.summarize/releases/download/v0.0.1/enconvo.summarize.enconvoplugin",
-      "minAppVersion": "1.1.8"
-    }
+
   ]
 }

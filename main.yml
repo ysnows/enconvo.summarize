@@ -1,33 +1,33 @@
 name: Summarize
-version: 0.0.1
+version: 0.0.2
 author: enconvo
-on: {}
+on: { }
 steps:
-- name: ''
-  uses: prompt
-  env:
-    Model:
-      type: enum
-      value: gpt-3.5-turbo
-      sort: 0
-      messages: []
-    Messages:
-      type: messages
-      value: ''
-      sort: 2
-      messages:
-      - role: system
-        content: 'Condense the text in its original language of: {{text|contextText|copiedText}}'
-    Temperature:
-      type: enum
-      value: '0.9'
-      sort: 1
-      messages: []
-    Output:
-      type: bool
-      value: 'true'
-      sort: 3
-      messages: []
+  - name: ''
+    uses: prompt
+    env:
+      Model:
+        type: enum
+        value: gpt-3.5-turbo
+        sort: 0
+        messages: [ ]
+      Messages:
+        type: messages
+        value: ''
+        sort: 2
+        messages:
+          - role: system
+            content: 'Condense the text in its original language of: {{text|contextText|copiedText}}'
+      Temperature:
+        type: enum
+        value: '0.9'
+        sort: 1
+        messages: [ ]
+      Output:
+        type: bool
+        value: 'true'
+        sort: 3
+        messages: [ ]
 extensionId: enconvo.summarize
 logo: ns:summary
 description: Condense the text
@@ -35,5 +35,4 @@ async: false
 shortName: ''
 homePage: https://github.com/ysnows/enconvo.summarize
 appCast: 'https://raw.githubusercontent.com/ysnows/enconvo.summarize/main/appcast.json'
-shortCut: ''
-minAppVersion: ''
+minAppVersion: 1.2.1
