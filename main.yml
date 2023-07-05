@@ -1,5 +1,5 @@
 name: Summarize
-version: 0.0.4
+version: 0.0.5
 author: enconvo
 on: { }
 steps:
@@ -17,7 +17,9 @@ steps:
         sort: 2
         messages:
           - role: system
-            content: 'Condense the text in its original language of: {{text|contextText|copiedText}}'
+            content: '{{text|contextText|copiedText}}
+            
+                      Tl;dr'
       Temperature:
         type: enum
         value: '0.9'
