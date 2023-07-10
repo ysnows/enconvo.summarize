@@ -97,7 +97,7 @@ function main() {
                     }
                 }
 
-                const template = "{content}\n\nTl;dr\n respond in chinese\n";
+                const template = "{content}\n\nTl;dr\n respond in the text's language\n";
 
                 const prompt = ChatPromptTemplate.fromPromptMessages(
                     [

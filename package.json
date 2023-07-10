@@ -12,6 +12,8 @@
     "format": "prettier --write \"**/*.ts\"",
     "format:check": "prettier --list-different \"**/*.ts\"",
     "build": "webpack",
+    "deploy": "webpack &&  cp -r dist/* ~/Library/Application\\ Support/Enconvo/extension/enconvo.summarize",
+    "publish": "webpack && mv dist enconvo.summarize && zip -r enconvo.summarize.zip enconvo.summarize && rm -rf enconvo.summarize",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
