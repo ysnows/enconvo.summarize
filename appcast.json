@@ -2,6 +2,12 @@
   "identifier": "enconvo.blog",
   "versions": [
     {
+      "version": "0.0.7",
+      "desc": "1. nodejstask optimize",
+      "url": "https://github.com/ysnows/enconvo.summarize/releases/download/v0.0.7/enconvo.summarize.enconvoplugin",
+      "minAppVersion": "1.1.8"
+    },
+    {
       "version": "0.0.6",
       "desc": "feat: 1. init",
       "url": "https://github.com/ysnows/enconvo.summarize/releases/download/v0.0.6/enconvo.summarize.enconvoplugin",
