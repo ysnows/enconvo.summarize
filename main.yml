@@ -1,0 +1,62 @@
+name: Summarize
+version: 0.0.6
+author: enconvo
+on: { }
+steps:
+  - name: ''
+    uses: nodejs
+    stream: true
+extensionId: enconvo.summarize
+logo: ns:summary
+description: Condense the text
+async: false
+shortName: ''
+homePage: https://github.com/ysnows/enconvo.summarize
+appCast: 'https://raw.githubusercontent.com/ysnows/enconvo.summarize/main/appcast.json'
+minAppVersion: 1.2.1
+flowType: plugin
+options:
+  - title: Model Settings
+    items:
+      - identifier: temperature
+        type: menu
+        title: Temperature
+        defaultValue: '1.0'
+        menuValues:
+          - title: 'none'
+            value: '0.0'
+          - title: 'low'
+            value: '0.5'
+          - title: 'medium'
+            value: '1.0'
+          - title: 'high'
+            value: '1.5'
+          - title: 'maximum'
+            value: '2.0'
+      - identifier: model
+        type: llmModel
+        title: LLM Model
+        defaultValue: 'llm.default|--|default'
+  - title: General
+    items:
+      - identifier: Alias
+        type: text
+        title: Alias
+        defaultValue: ''
+        menuValues: [ ]
+        desc: ''
+        placeholderText: Add alias
+        textWidth: 1.6e+2
+        disable: false
+      - identifier: Hotkey
+        type: hotkey
+        title: Hotkey
+        defaultValue: ''
+        menuValues: [ ]
+        desc: "This shortcut will open an ai conversation window from anywhere in the
+      system\n      . Make sure it is not conflicting with other global shortcuts."
+        placeholderText: Add a hotkey to global start
+        textWidth: 1.6e+2
+        disable: false
+    desc: ''
+
