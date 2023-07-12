@@ -7,17 +7,6 @@ import jsdom, {JSDOM} from "jsdom";
 import axios from "axios";
 import {ChatOpenAI} from "langchain/chat_models";
 
-// @ts-expect-error
-// import wasm from '@dqbd/tiktoken/lite/tiktoken_bg.wasm';
-import tiktokenModel from '@dqbd/tiktoken/encoders/cl100k_base.json' assert {type: "json"};
-import {Tiktoken, init} from '@dqbd/tiktoken/lite/init';
-import path from "path";
-import * as fs from "fs";
-
-export const config = {
-    runtime: 'edge',
-};
-
 function main() {
     (async () => {
         const args = process.argv.slice(2);
@@ -106,18 +95,6 @@ function main() {
                 const promptMessages = promptValue.toChatMessages()
                 console.log("prompt:", promptMessages);
 
-                const wasmFilePath = path.resolve(`${process.env['__ROOT_DIR__']}/node/tiktoken_bg.wasm`);
-                const wasmBuffer = fs.readFileSync(wasmFilePath);
-                await init((imports) => WebAssembly.instantiate(wasmBuffer, imports));
-                const encoding = new Tiktoken(
-                    tiktokenModel.bpe_ranks,
-                    tiktokenModel.special_tokens,
-                    tiktokenModel.pat_str,
-                );
-
-                const tokens = encoding.encode(promptValue.toString());
-                console.log("tokens:", tokens.length)
-                encoding.free();
 
 
                 startMonitor()
