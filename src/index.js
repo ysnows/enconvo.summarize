@@ -24,11 +24,19 @@ const {webutil} = require("enconvo/tools");
     }
 
     const templateText = `
-    TL;DR the text below:
-     
-    Text: {text}
-        
-    TL;DR: 
+    TL;DR the text below: 
+    
+    Text:
+    {text}
+    
+    Formats:
+      a list
+    
+    Response Language: 
+    {language}
+    
+    TL;DR:
+    
     
     `
 
@@ -38,7 +46,7 @@ const {webutil} = require("enconvo/tools");
         SystemMessagePromptTemplate.fromTemplate(templateText)
     ])
 
-    messages = await template.formatMessages({text: contextText})
+    messages = await template.formatMessages({text: contextText, language: "zh"})
 
     await chat.call(messages, {}, CallbackManager.fromHandlers({
         handleLLMNewToken(token, idx, runId, parentRunId, tags) {
