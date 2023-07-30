@@ -30,7 +30,8 @@
     "*.js"
   ],
   "dependencies": {
-    "enconvo": "^1.6.1"
+    "enconvo": "^1.6.1",
+    "langchain": "^0.0.119"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
