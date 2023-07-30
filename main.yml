@@ -1,5 +1,5 @@
 name: Summarize
-version: 0.1.3
+version: 0.1.5
 author: enconvo
 on: {}
 steps:
@@ -63,6 +63,29 @@ options:
           system\n      . Make sure it is not conflicting with other global shortcuts."
         placeholderText: Add a hotkey to global start
         textWidth: 1.6e+2
+        disable: false
+      - identifier: lang
+        type: menu
+        title: Response Language
+        defaultValue: 'zh-Hans'
+        menuValues:
+          - title: '中文简体'
+            value: 'zh-Hans'
+          - title: '中文繁体'
+            value: 'zh-Hant'
+          - title: 'English'
+            value: 'en'
+          - title: 'Japanese'
+            value: 'ja'
+          - title: 'Korean'
+            value: 'ko'
+          - title: 'French'
+            value: 'fr'
+          - title: 'German'
+            value: 'de'
+          - title: 'Spanish'
+            value: 'es'
+        desc: ''
         disable: false
     desc: ''
 sort: 6
