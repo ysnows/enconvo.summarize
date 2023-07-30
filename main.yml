@@ -1,5 +1,5 @@
 name: Summarize
-version: 0.1.5
+version: 0.1.6
 author: enconvo
 on: {}
 steps:
@@ -67,8 +67,10 @@ options:
       - identifier: lang
         type: menu
         title: Response Language
-        defaultValue: 'zh-Hans'
+        defaultValue: 'auto'
         menuValues:
+          - title: 'auto'
+            value: 'auto'
           - title: '中文简体'
             value: 'zh-Hans'
           - title: '中文繁体'
