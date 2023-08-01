@@ -30,7 +30,7 @@
     "*.js"
   ],
   "dependencies": {
-    "enconvo": "^1.6.1",
+    "enconvo": "^1.6.5",
     "langchain": "^0.0.119"
   },
   "devDependencies": {
